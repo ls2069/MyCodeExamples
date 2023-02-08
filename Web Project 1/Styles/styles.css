@@ -1,0 +1,256 @@
+*{
+  font-family: sans-serif;
+}
+body{
+  margin:0px;
+  background-image: url("White_Lego_background.png");
+}
+a:visited {
+  color: black;
+}
+
+a.Footer_Link{
+  color: white;
+}
+header{
+  background-color: white;
+}
+figure{
+  margin:5px;
+  padding-left:10px;
+}
+figure.logo{
+  display:flex;
+  justify-content: center;
+}
+nav{
+  display:flex;
+  justify-content: flex-start;
+  background-color: #FFCF00
+}
+ul{
+  display:flex;
+  list-style-type: none;
+}
+li.navMenu{
+  padding: 20px;
+  font-size: 2em;
+  color: black;
+}
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul.Collection_ul{
+  justify-content: space-around;
+  padding-right:40px;
+  margin-top:40px;
+  margin-bottom:0px;
+}
+ul.navBar{
+  padding-right:40px;
+}
+footer{
+  background-color: #444444;
+  margin-top:50px;
+  margin-bottom:0px;
+}
+section.Description{
+  padding:20px;
+  display:flex;
+  justify-content: space-around;
+}
+section.Collect_Container{
+  background-color: #FFCF00;
+}
+section.vidPlayer{
+  background-image: url("Light_Blue_Lego_background.png");
+  /* The Light_Blue_Lego_background image file is stored in both the styles and the images folder, as the image can't be accessed using the CSS from the Images folder */
+  justify-content: center;
+}
+h1{
+  font-size: 3em;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+h1.Collection_head{
+  margin:0px;
+  padding-top:20px;
+  text-align: center;
+}
+/*
+This code is based upon an example from the W3Schools CSS tutorial on Buttons
+Author: W3Schools
+Location: https://www.w3schools.com/css/css3_buttons.asp
+Accessed: 20/02/2022
+
+I modified elements such as the margin, border, border radius and box shadow
+*/
+button {
+  margin:40px;
+  background-color: #FFCF00;
+  border: 2px solid black;
+  border-radius: 12px;
+  color: black;
+  padding: 15px 32px;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button:hover{
+  border: 2px solid #FFCF00;
+  background-color: black;
+  color: #FFCF00;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.24);
+}
+/* My modifications from the example ends here, the below code is all implemented by myself*/
+
+figcaption{
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  bottom:30px;
+  background-color: white;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.24);
+
+}
+iframe{
+  border:0px;
+  width:100%;
+  height:500px;
+}
+img{
+  width:100%;
+}
+ul.ContentGrid{
+  display:grid;
+  grid-template-columns: 70% 30%;
+  padding:40px;
+  margin-bottom:0px;
+
+}
+ul.ContentGrid li{
+  background-color: white;
+  padding:20px;
+}
+section.Collect_Container img{
+  height: 100%;
+}
+header h1{
+  margin:0px;
+  padding:20px;
+}
+footer{
+  margin:0px;
+  padding: 10px;
+  color: white;
+}
+article{
+  padding:40px;
+  flex:50%;
+}
+article.Learn_Page_Article{
+  margin:40px;
+  padding:20px;
+  align-content: center;
+  background-color: white;
+  text-align: center;
+
+}
+article.Learn_Page_Article h1{
+  border-bottom: 1px solid grey;
+}
+article.Learn_Page_Article p{
+  text-align: left;
+}
+section.Collection_Grids{
+  margin:30px;
+  padding:30px;
+}
+section.Collection_Grids h1{
+  text-align: center;
+}
+
+@media only screen and (max-width: 1920px) {
+  article.Learn_Page_Article{
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+  h1{
+    font-size: 5em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+  .Destiny_Bounty{
+    display: flex;
+  }
+  footer img{
+    width:7.5%;
+    height:7.5%;
+    padding:20px;
+  }
+  footer div{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  footer ul{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  footer li{
+    padding: 20px;
+  }
+  section.Collection_Grids{
+    background-color: white;
+    display:grid;
+  }
+
+
+}
+@media only screen and (max-width: 1400px) {
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 1.25em;
+  }
+
+
+}
+@media only screen and (max-width: 1000px) {
+  section.Description{
+    display:inline-block;
+  }
+  ul.ContentGrid{
+    display: inline-block;
+  }
+  h2{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+  article.Learn_Page_Article{
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .Destiny_Bounty{
+    display: inline-block;
+  }
+
+}

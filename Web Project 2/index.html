@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- This code is based upon an example from the W3Schools HTML tutorial on Comments
+    Author: W3Schools
+    Location: https://www.w3schools.com/html/html_comments.asp
+    Accessed: 03/03/2022 -->
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- Code underneath includes the jquery and bootstrap components, as well as a link to the stylesheet which customises elements on the site -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Styles/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <!-- "fullImage" is used to ensure the width is 100% on the site, as the original image extends the site borders and ruins the positioning of everything else -->
+    <img src = "Images/Home/UPP_Banner.png" alt = "Ultimate Party Planner Banner" class = "fullImage">
+  </header>
+  <!-- This code is based upon an example from the W3Schools Bootstrap 5 tutorial on Navigation Bars
+  Author: W3Schools
+  Location: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php
+  Accessed: 24/04/2022 -->
+  <!-- Areas that were edited include custom hrefs such as "index.html", names of items inside the navbar, and in the "shop.html" and "under_construction.html", the active nav link is changed to the shop item in the nav bar to make it easier to see which page the user is on -->
+  <nav class = "navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class = "container-fluid">
+      <ul class = "navbar-nav">
+        <li class = "nav-item">
+          <a class = "nav-link active" href = "index.html">Home</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "shop.html">Shop</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "under_construction.html">Decorations</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "under_construction.html">Dining</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "under_construction.html">Entertainment</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id = "homeInfoSection">
+    <section id = "infoTextBlock" class = "hasShadow">
+      <h2><strong>Party Planning in 3 Clicks!</strong></h2>
+      <h3><strong>It really is that simple!</strong></h3>
+      <p><strong>Thanks to our structured shopping system, planning children's birthday parties has never been simpler!</strong></p>
+      <p><strong>Click the button below to view our catelogue and plan your child's perfect party now!</strong></p>
+      <button type = "button" class = "btn btn-style1 hasShadow" id = "shopPageButton">Shop Now</button>
+    </section>
+    <img src = "Images/Home/party_info_block.jpg" alt = "Image of a Birthday party" id = "infoblock_img">
+  </div>
+  <!-- This code is based upon an example from the W3Schools Bootstrap 5 tutorial on Carousels
+  Author: W3Schools
+  Location: https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_carousel
+  Accessed: 24/04/2022 -->
+  <div id = "decoCarousel" class = "carousel slide" data-bs-ride = "carousel">
+    <!-- code for the indicators, code is almost identical to w3schools example apart from id name -->
+    <div class = "carousel-indicators">
+      <button type = "button" data-bs-target="#decoCarousel" data-bs-slide-to="0" class = "active"></button>
+      <button type = "button" data-bs-target="#decoCarousel" data-bs-slide-to="1"></button>
+      <button type = "button" data-bs-target="#decoCarousel" data-bs-slide-to="2"></button>
+      <button type = "button" data-bs-target="#decoCarousel" data-bs-slide-to="3"></button>
+    </div>
+    <!-- code for elements listed inside the carousel, including the images and the overlaid text -->
+    <div class = "carousel-inner">
+      <div class = "carousel-item active">
+        <img src = "Images/Home/carousel_1.png" alt = "Image of balloons at a birthday party" class = "d-block w-100">
+      </div>
+      <div class = "carousel-item">
+        <img src = "Images/Home/carousel_2.png" alt = "Image of children with party hats" class = "d-block w-100">
+      </div>
+      <div class = "carousel-item">
+        <img src = "Images/Home/carousel_3.png" alt = "Image of confetti at a birthday party" class = "d-block w-100">
+      </div>
+      <div class = "carousel-item">
+        <img src = "Images/Home/carousel_4.png" alt = "Image of custom banners at a birthday party" class = "d-block w-100">
+      </div>
+    </div>
+    <!-- code for the buttons that control the carousel, unchanged from the w3schools example other than the decoCarousel id name -->
+    <button class = "carousel-control-prev" type = "button" data-bs-target = "#decoCarousel" data-bs-slide = "prev">
+      <span class = "carousel-control-prev-icon"></span>
+    </button>
+    <button class = "carousel-control-next" type = "button" data-bs-target = "#decoCarousel" data-bs-slide = "next">
+      <span class = "carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- My modifications end here -->
+  <!-- This code is based upon an example from the W3Schools Bootstrap 5 tutorial on Cards
+  Author: W3Schools
+  Location: https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_card_image&stacked=h
+  Accessed: 23/04/2022 -->
+  <!-- Areas that were modified include the h2, h4, p and a text areas, with additions to the classes such as "hasShadow" to include shadows and "blue" to make the background blue -->
+  <section id = "entertainerDisplay">
+    <h2 class = "greybackground hasShadow">Meet the Talent!</h2>
+    <div id = "talentSectionCards">
+    <div class="card hasShadow">
+    <img class="card-img-top blue" src="Images/Entertainment/Greg.png" alt="Image of Greg The Clown">
+    <div class="card-body">
+      <h4 class="card-title">Greg The Clown</h4>
+      <p class="card-text">Rated 5 stars in every performance so far, Greg The Clown is the talk around town!</p>
+      <a href="under_construction.html" class="btn btn-style1 hasShadow">Learn More</a>
+    </div>
+  </div>
+  <br>
+    <div class="card hasShadow">
+    <img class="card-img-top yellow" src="Images/Entertainment/Manny.png" alt="Image of Manny The Magician">
+    <div class="card-body">
+      <h4 class="card-title">Manny The Magician</h4>
+      <p class="card-text">Managing to fool the infamous Penn and Teller, Manny can make anything disappear!</p>
+      <a href="under_construction.html" class="btn btn-style1 hasShadow">Learn More</a>
+    </div>
+    </div>
+    <br>
+    <div class="card hasShadow">
+    <img class="card-img-top red" src="Images/Entertainment/Charlie.png" alt="Image of Charlie The Comedian">
+    <div class="card-body">
+      <h4 class="card-title">Charlie The Comedian</h4>
+      <p class="card-text">From class clown to renowned professional comedian, Charlie can crack up the toughest of crowds!</p>
+      <a href="under_construction.html" class="btn btn-style1 hasShadow">Learn More</a>
+    </div>
+    </div>
+  </div>
+  <!-- My modifications end here -->
+  </section>
+  <footer>
+    <!-- The footer was seperated into seperate unordered lists to make the css cleaner, showing as 3 distinct listed columns that are related for a more recognisable appearance -->
+    <h2>UltimatePartyPlanner.co.uk</h2>
+    <div id = "footer_contents">
+    <ul>
+      <li><a href = "index.html">Home</a></li>
+      <li><a href = "under_construction.html">About Us</a></li>
+    </ul>
+    <ul>
+      <li><a href = "under_construction.html">Decorations</a></li>
+      <li><a href = "under_construction.html">Dining</a></li>
+      <li><a href = "under_construction.html">Entertainment</a></li>
+    </ul>
+    <ul>
+      <li><a href = "shop.html">Shop</a></li>
+    </ul>
+  </div>
+  </footer>
+
+  <script type = "text/javascript">
+  //this code takes the user to shop.html when the button is clicked, linking a button press to the shopPage function
+  document.getElementById("shopPageButton").addEventListener('click',shopPage);
+
+  function shopPage(){
+    window.location.href = 'shop.html';
+  }
+  </script>
+</body>

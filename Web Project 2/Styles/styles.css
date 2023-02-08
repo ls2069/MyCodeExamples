@@ -1,0 +1,164 @@
+*{
+  font-family: sans-serif;
+}
+footer{
+  background-color: #2b2b2b;
+  color:white;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  align-content: flex-end;
+}
+footer div{
+  display: flex;
+  justify-content: space-around;
+}
+footer h2{
+  text-align: center;
+  padding:20px;
+}
+ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+ul a{
+  color:white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.imgrow{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  margin:10px;
+  text-align: center;
+}
+.card-text{
+  text-align: left;
+}
+#shop_banner{
+  display: grid;
+  grid-template-columns: 80% 20%;
+
+}
+
+#shop_banner h1{
+  text-align: center;
+}
+#basket{
+  width:200px;
+}
+#payment_form{
+  margin-left: 40%;
+  text-align: justify;
+}
+#submit{
+  margin-left: 10%;
+}
+#basket_list{
+  text-align: center;
+}
+.selectMenu{
+  width:200px;
+
+}
+#addToBasket{
+  width:200px;
+  margin-bottom: 10px;
+}
+.construction_message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding:20px;
+}
+#info_box{
+  margin-right: 30%;
+  margin-left:30%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.text-block{
+  background-color: white;
+  color: black;
+}
+.btn-style1{
+  background-color: #fff192;
+}
+#talentSectionCards{
+  padding-left: 50px;
+  padding-right: 50px;
+  display:flex;
+  justify-content: space-around;
+}
+#homeInfoSection{
+  background-image: url("UPP_Background.png");
+  display: flex;
+}
+#infoTextBlock{
+  margin:2%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2%;
+
+}
+.card-img-top{
+  height:400px;
+  width:auto;
+}
+#entertainerDisplay{
+  background-image: url("UPP_Background.png");
+}
+.greybackground{
+  background-color: #2b2b2b;
+  color:white;
+  padding:20px;
+  text-align: center;
+}
+#infoblock_img{
+  width: 55%;
+}
+#infoTextBlock h2{
+  font-size: 3em;
+}
+#infoTextBlock button{
+  margin-top: 50px;
+  font-size: 2em;
+  border-color: black;
+}
+.yellow{
+  background-color: #fff192;
+}
+.red{
+  background-color: #ec5e5c;
+}
+.blue{
+  background-color:#76bdcf;
+}
+.background{
+  background-image: url("UPP_Background.png");
+}
+.addBasket{
+  margin-right: 40%;
+  margin-left: 40%;
+  width: 300px;
+  justify-content: center;
+  text-align: center;
+}
+.largeTitleText{
+  text-align: center;
+  padding: 20px;
+  border: 2px solid black;
+}
+.hasShadow{
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.construction_shoplink{
+  text-decoration: none;
+  color:black;
+}
+.fullImage{
+  width: 100%;
+}

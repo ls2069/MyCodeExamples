@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Styles/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <img src = "Images/Home/UPP_Banner.png" alt = "Ultimate Party Planner Banner" class = "fullImage">
+  </header>
+  <!-- This code is based upon an example from the W3Schools Bootstrap 5 tutorial on Navigation Bars
+  Author: W3Schools
+  Location: https://www.w3schools.com/bootstrap5/bootstrap_navbar.php
+  Accessed: 24/04/2022 -->
+  <!-- Areas that were edited include custom hrefs such as "index.html", names of items inside the navbar, and in the "shop.html" and "under_construction.html", the active nav link is changed to the shop item in the nav bar to make it easier to see which page the user is on -->
+  <nav class = "navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class = "container-fluid">
+      <ul class = "navbar-nav">
+        <li class = "nav-item">
+          <a class = "nav-link" href = "index.html">Home</a>
+        </li>
+        <li class = "nav-item">
+          <!-- nav-link active is switched to the shop.html section to make it clearer to the user what page they are on -->
+          <a class = "nav-link active" href = "shop.html">Shop</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "under_construction.html">Decorations</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "under_construction.html">Dining</a>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "under_construction.html">Entertainment</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- This section divides the Shop title and the view basket button -->
+  <div id = "shop_items" class = "greybackground">
+    <section id = "shop_banner">
+      <h2 class = "shopbanner"><strong>Shop</strong></h2>
+      <button type = "button" class = "btn blue" data-bs-toggle = "offcanvas" data-bs-target = "#shoppingBasket"><strong>View Basket</strong>
+
+      </button>
+    </section>
+  </div>
+  <!-- This code is based upon an example from the W3Schools Bootstrap 5 tutorial on Offcanvas Sidebars
+  Author: W3Schools
+  Location: https://www.w3schools.com/bootstrap5/bootstrap_offcanvas.php
+  Accessed: 22/04/2022 -->
+  <!-- My modifications include the addition of the p with "basketList", which is linked to the WebSQL table and actively updates the table and display with button presses, such as the "empty basket" button -->
+  <div class = "offcanvas offcanvas-start" id = "shoppingBasket">
+    <div class = "offcanvas-header">
+      <h1 class = "offcanvas-title">Shopping Basket</h1>
+      <button type = "button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class = "offcanvas-body">
+      <p id = "basketList"></p>
+      <button type = "button" class = "btn btn-outline-secondary hasShadow" id = "lastItemRemove">Empty Basket</button>
+    </div>
+  </div>
+  <!-- My modifications end here -->
+    <!-- The "background" gives all assigned elements a background of the polka dot background, similar to the hasShadow class, reducing the need to repeat the code in the css -->
+    <div class = "background">
+    <section id = "decorations_list">
+      <h2 class= "red largeTitleText hasShadow"><strong>Decorations</strong></h2>
+      <p id = "decList" class = "imgrow"></p>
+      <p class = "selectMenu">
+    </section>
+
+    <section id = "dining_list">
+      <h2 class= "yellow largeTitleText hasShadow"><strong>Dining</strong></h2>
+      <p id = "dinList" class = "imgrow"></p>
+    </section>
+
+    <section id = "entertainment_list">
+      <h2 class= "blue largeTitleText hasShadow"><strong>Entertainment</strong></h2>
+      <p id = "entList" class = "imgrow"></p>
+      <div class = "addBasket">
+        <!-- This code is based upon an example from the W3Schools Bootstrap 5 tutorial on Select Menus
+        Author: W3Schools
+        Location: https://www.w3schools.com/bootstrap5/bootstrap_form_select.php
+        Accessed: 20/04/2022 -->
+        <!-- The form select lets the user select the name of the item they want, then adding it to the basket when the button is pressed. The select menu reduces the likelyhood of user mis-input or potential WebSQL strings being entered, reducing the likelyhood a user will mess with the basket display -->
+      <select class="form-select" id = "itemName">
+        <option id = itemName>Helium Balloons</option>
+        <option id = itemName>Party Hats</option>
+        <option id = itemName>Confetti</option>
+        <option id = itemName>Custom Banners</option>
+        <option id = itemName>Birthday Cake</option>
+        <option id = itemName>Fish and Chips</option>
+        <option id = itemName>Pizza</option>
+        <option id = itemName>Ice Cream</option>
+        <option id = itemName>Greg The Clown</option>
+        <option id = itemName>Manny The Magician</option>
+        <option id = itemName>Charlie The Comedian</option>
+      </select>
+      <!-- My modifications end here -->
+      <br>
+      <!-- This is the submit button, given the yellow colouring and a shadow -->
+      <button type = "button" class = "btn yellow hasShadow" id="addToBasket">Add to Basket</button>
+    </div>
+    </section>
+  </div>
+</div>
+  <footer>
+    <h2>UltimatePartyPlanner.co.uk</h2>
+    <div id = "footer_contents">
+    <ul>
+      <li><a href = "index.html">Home</a></li>
+      <li><a href = "under_construction.html">About Us</a></li>
+    </ul>
+    <ul>
+      <li><a href = "under_construction.html">Decorations</a></li>
+      <li><a href = "under_construction.html">Dining</a></li>
+      <li><a href = "under_construction.html">Entertainment</a></li>
+    </ul>
+    <ul>
+      <li><a href = "shop.html">Shop</a></li>
+    </ul>
+  </div>
+  </footer>
+  <script type = "text/javascript">
+  //This opens the shop database, with the variables for the tables and the table entries being included underneath
+  var db = openDatabase('shopDB','2.0','Ultimate Party Planner Database', 2 * 1024 * 1024);
+  var decorationsList, diningList, entertainmentList, basket;
+  var itemName, itemPrice, itemPackQty;
+
+  //these link the add to basket and empty basket buttons to the databases, working by running the functions when a button is pressed to add or remove items from the basket database
+  document.getElementById('addToBasket').addEventListener('click',addToBasket);
+  document.getElementById('lastItemRemove').addEventListener('click',emptyBasket);
+
+  function populateDB(tx){
+    //decorations table includes the unique itemID, it's name, it's price, the number of items per pack, and it's image link with corresponding alt text
+    tx.executeSql('CREATE TABLE IF NOT EXISTS decorations (itemID unique, itemName, itemPrice, itemPackQty, itemImg, itemAltText)');
+    tx.executeSql('INSERT INTO decorations (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (1, "Helium Balloons", 2.25, 25, "Images/Decorations/h_balloons.png", "Image of Helium Balloons")');
+    tx.executeSql('INSERT INTO decorations (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (2, "Party Hats", 3.00, 10, "Images/Decorations/p_hats.png", "Image of Party Hats")');
+    tx.executeSql('INSERT INTO decorations (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (3, "Confetti", 1.00, 3, "Images/Decorations/confetti.png", "Image of Confetti")');
+    tx.executeSql('INSERT INTO decorations (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (4, "Custom Banners", 4.00, 5, "Images/Decorations/c_banners.png", "Image of Custom Banners")');
+
+    //dining table includes the unique itemID, it's name, it's price, the number of items per pack, and it's image link with corresponding alt text
+    tx.executeSql('CREATE TABLE IF NOT EXISTS dining (itemID unique, itemName, itemPrice, itemPackQty, itemImg, itemAltText)');
+    tx.executeSql('INSERT INTO dining (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (5, "Birthday Cake", 12.50, 1, "Images/Dining/b_cake.png", "Image of Birthday Cake")');
+    tx.executeSql('INSERT INTO dining (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (6, "Fish and Chips", 3.00, 10, "Images/Dining/fish_chip.png", "Image of Fish and Chips")');
+    tx.executeSql('INSERT INTO dining (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (7, "Pizza", 5.00, 5, "Images/Dining/pizza.png", "Image of Pizza")');
+    tx.executeSql('INSERT INTO dining (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (8, "Ice Cream", 2.50, 15, "Images/Dining/ice_cream.png", "Image of Ice Cream")');
+
+    //entertainment table includes the unique itemID, it's name, it's price, the number of items per pack, and it's image link with corresponding alt text
+    tx.executeSql('CREATE TABLE IF NOT EXISTS entertainment (itemID unique, itemName, itemPrice, itemPackQty, itemImg, itemAltText)');
+    tx.executeSql('INSERT INTO entertainment (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (9, "Greg The Clown", 20.00, 1, "Images/Entertainment/Greg.png" , "Image of a Clown")');
+    tx.executeSql('INSERT INTO entertainment (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (10, "Manny The Magician", 25.00, 1, "Images/Entertainment/Manny.png" , "Image of a Magician")');
+    tx.executeSql('INSERT INTO entertainment (itemID, itemName, itemPrice, itemPackQty, itemImg, itemAltText) VALUES (11, "Charlie The Comedian", 15.00, 1, "Images/Entertainment/Charlie.png" , "Image of a Comedian")');
+
+    //basket table is left empty, but retains the ID, name, price, and pack quantity of each item added for display in the shopping basket
+    tx.executeSql('CREATE TABLE IF NOT EXISTS basket (itemID unique, itemName, itemPrice, itemPackQty)');
+    }
+
+    function selectAlldecorations(tx){
+      // This code is based upon a section from the University Of York Week 10 WebSQL Practical 1
+      // Author: The University Of York
+      // Location: https://vle.york.ac.uk/bbcswebdav/pid-4449822-dt-content-rid-13007719_2/xid-13007719_2
+      // Accessed: 18/04/2022
+      tx.executeSql('SELECT * FROM decorations', [], function(tx, results){
+        var decListLen = results.rows.length;
+        //Similar to the example code, the variable takes the length of the table
+        decorationsList = "";
+
+        for (var i = 0; i < decListLen; i++) {
+          decorationsList += "<div class='card hasShadow' style='width:400px'>" + "<img class='card-img-top red' src = " + results.rows.item(i).itemImg + " alt = '" + results.rows.item(i).itemAltText + "'>" + "<div class = 'card-body'>" + "<h4 class = 'card-title' id = 'decoTitle>" + results.rows.item(i).itemID +"'><strong>" + results.rows.item(i).itemName + "</strong></h4>" + "<p class = 'card-text'>" + "<strong>Price:</strong> £" + results.rows.item(i).itemPrice + "</p>" + "<p class = 'card-text'>" + "<strong>Quantity:</strong> " + results.rows.item(i).itemPackQty + "</p>" + "</div>" + "</div>";
+        }
+        //The for loop then adds the information from the table into bootstrap cards. This was inspired by the ability to add elements such as links as elements, leading to the testing of producing multiple bootstrap elements with information from the table inside such as images and text
+        //This is then repeated for the dining and entertainment lists, then edited in the css file using classes such as hasShadow and blue, yellow, red, etc. for the image backgrounds
+        document.getElementById('decList').innerHTML = decorationsList;
+      });
+    }
+
+    function selectAlldining(tx){
+      tx.executeSql('SELECT * FROM dining', [], function(tx, results){
+        var dinListLen = results.rows.length;
+        diningList = "";
+
+        for (var i = 0; i < dinListLen; i++) {
+          diningList += "<div class='card hasShadow' style='width:400px'>" + "<img class='card-img-top yellow' src = " + results.rows.item(i).itemImg + " alt = '" + results.rows.item(i).itemAltText + "'>" + "<div class = 'card-body'>" + "<h4 class = 'card-title' id = 'decoTitle" + results.rows.item(i).itemID +"'><strong>" + results.rows.item(i).itemName + "</strong></h4>" + "<p class = 'card-text'>" + "<strong>Price:</strong> £" + results.rows.item(i).itemPrice + "</p>" + "<p class = 'card-text'>" + "<strong>Quantity:</strong> " + results.rows.item(i).itemPackQty + "</p>" + "</div>" + "</div>";
+        }
+
+        document.getElementById('dinList').innerHTML = diningList;
+      });
+    }
+
+    function selectAllentertainment(tx){
+      tx.executeSql('SELECT * FROM entertainment', [], function(tx, results){
+        var entListLen = results.rows.length;
+        entertainmentList = "";
+
+        for (var i = 0; i < entListLen; i++) {
+          entertainmentList += "<div class='card hasShadow' style='width:500px'>" + "<img class='card-img-top blue' src = " + results.rows.item(i).itemImg + " alt = '" + results.rows.item(i).itemAltText + "'>" + "<div class = 'card-body'>" + "<h4 class = 'card-title' id = 'decoTitle" + results.rows.item(i).itemID +"'><strong>" + results.rows.item(i).itemName + "</strong></h4>" + "<p class = 'card-text'>" + "<strong>Price:</strong> £" + results.rows.item(i).itemPrice + " per hour</p>" + "<p class = 'card-text'>" + "<strong>Quantity:</strong> " + results.rows.item(i).itemPackQty + "</p>" + "</div>" + "</div>";
+        }
+
+        document.getElementById('entList').innerHTML = entertainmentList;
+      });
+    }
+
+    function selectAllinBasket(tx){
+      tx.executeSql('SELECT * FROM basket', [], function(tx, results){
+        var baskListLen = results.rows.length;
+        basket = "";
+        for (var i = 0; i < baskListLen; i++) {
+          basket += "Item: " + results.rows.item(i).itemName + "<br>" + "Price: £" + results.rows.item(i).itemPrice + "<br>" + "Pack Quantity: " + results.rows.item(i).itemPackQty + "<br>" + "<br>";
+        }
+        //The basket code is much simpler, taking in less values as no images are added, but is actively updated down below
+
+        document.getElementById('basketList').innerHTML = basket;
+      });
+    }
+
+    function addToBasket(){
+        itemName = document.getElementById('itemName').value;
+
+        //When the button is clicked, the basket is updated (updating the number of items in the basket at the time)
+        //Then, the item is added, and given a price using the switch statement to determine what item it is.
+        //The basket list is then updated, updating the display in the process making the basket on the screen accurate
+        db.transaction(basketUpdate);
+        db.transaction(addItem);
+        db.transaction(selectAllinBasket);
+      }
+
+    function basketUpdate(tx){
+      tx.executeSql('SELECT * FROM basket', [],function (tx,results) {
+        addItemInBasket = results.rows.length;
+      });
+    }
+
+    function addItem(tx){
+      addItemInBasket ++;
+      //A switch statement determines the itemPrice and itemPackQty values based on the itemName
+      switch(itemName){
+        case 'Helium Balloons':
+          itemPrice = 2.25;
+          itemPackQty = 25;
+          break;
+        case 'Party Hats':
+          itemPrice = 3;
+          itemPackQty = 10;
+          break;
+        case 'Confetti':
+          itemPrice = 1;
+          itemPackQty = 3;
+          break;
+        case 'Custom Banners':
+          itemPrice = 4;
+          itemPackQty = 5;
+          break;
+        case 'Birthday Cake':
+          itemPrice = 12.5;
+          itemPackQty = 1;
+          break;
+        case 'Fish and Chips':
+          itemPrice = 3;
+          itemPackQty = 10;
+          break;
+        case 'Pizza':
+          itemPrice = 5;
+          itemPackQty = 5;
+          break;
+        case 'Ice Cream':
+          itemPrice = 2.5;
+          itemPackQty = 12;
+          break;
+        case 'Greg The Clown':
+          itemPrice = "20 per hour";
+          itemPackQty = 1;
+          break;
+        case 'Manny The Magician':
+          itemPrice = "25 per hour";
+          itemPackQty = 1;
+          break;
+        case 'Charlie The Comedian':
+          itemPrice = "15 per hour";
+          itemPackQty = 1;
+          break;
+      }
+      //the table values are then added, which inserts the values based on what itemName, itemPrice and itemPackQty are.
+      tx.executeSql('CREATE TABLE IF NOT EXISTS basket (itemID unique, itemName, itemPrice, itemPackQty)');
+      tx.executeSql('INSERT INTO basket (itemID , itemName, itemPrice, itemPackQty) VALUES (?,?,?,?)', [addItemInBasket, itemName, itemPrice, itemPackQty]);
+    }
+    //My modifications end here
+
+    function emptyBasket(){
+      //Similar to the above code, the basket is updated, then ALL the items in the basket are removed, then the basket table is updated
+      db.transaction(basketUpdate);
+      db.transaction(removeAllInBasket);
+      db.transaction(selectAllinBasket);
+    }
+
+    function removeAllInBasket(tx){
+      //This SQL statement deletes all the values in the basket
+      tx.executeSql('DELETE FROM basket');
+    }
+
+    //These lines of code populate the database, then display all the values in the tables onto the screen
+    db.transaction(populateDB);
+    db.transaction(selectAlldecorations);
+    db.transaction(selectAlldining);
+    db.transaction(selectAllentertainment);
+    db.transaction(selectAllinBasket);
+
+  </script>
+</body>
+</html>
